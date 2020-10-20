@@ -1,6 +1,249 @@
 
+html {
+    height: 100vh;
+    width: 100vw;
+}
+
+button {
+    background: none;
+    border:none;
+    text-decoration: none;
+    color: black;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+*:focus {
+    outline: none;
+}
+
+input:focus, 
+input.form-control:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+button:hover,
+button:active,
+button:not(:disabled):active,
+button:disabled {
+    background: none;
+    border: none;
+    color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2em 2em 0 0;
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    margin: 0 .5em 0 .5em;
+}
+
+.navAppIcon {
+    width: 1.5em;
+}
+
+.userBorder {
+    width: 3em;
+    height: 3em;
+    background-color: lightgoldenrodyellow;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userIcon {
+    width: 2em;
+}
+
 canvas {
     display: block;
     width: 100%;
     height: 100%;
+    margin: -7em 0 -7em 0;
+}
+
+#searchbar {
+    position: relative;
+}
+
+#googleSearch {
+    padding-left: 2em;
+    border-radius: 5em;
+    outline: none;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.56);
+}
+
+#googleSearch:focus,
+#googleSearch:hover,
+#googleSearch:active {
+    background-color: #fff;
+    border-color: none;
+    outline: none;
+    box-shadow: 0;
+    
+}
+
+.searchIcon,
+#voiceSearch {
+    position: absolute;
+}
+
+.searchIcon {
+    width: 2.5%;
+    top: 8px;
+    left: 10px;
+}
+
+.searchIcon path {
+    fill: darkslategray;
+}
+
+::placeholder {
+    text-indent: 1%;
+}
+
+#voiceSearch {
+    top: 1px;
+    right: 1px;
+}
+
+.shortcutsContainer {
+    margin-top: 4.5em;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: .1em;
+}
+
+.shortcutIcon {
+    background-color: lightgoldenrodyellow;
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    margin: .5em auto;
+    display: flex;
+    justify-content: center;
+}
+
+.shortcuts {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.shortcuts:hover {
+    background-color: rgba(194, 201, 209, 0.5);
+    border-radius: 5%;
+}
+
+footer {
+    border: none;
+}
+
+.donation,
+#customize {
+    font-size: .8em;
+    color: #007bff;
+    cursor: pointer;
+    border: solid .1em rgba(202, 199, 196, .4);
+    border-radius: 5em;
+    box-shadow: 0 2px 3px -1px rgba(0,0,0,0.56);
+}
+
+.donation {
+    margin-top: 5.5em;
+    width: 12em;
+}
+
+.customizeContainer {
+    position: absolute;
+    top: 94%;
+    left: 92%;
+}
+
+#customize {
+    position: relative;
+    width: 9em;
+    text-align: right;
+}
+
+.editIcon {
+    width: 1.5em;
+    position: absolute;
+    left: 8%;
+    top: 18%;
+}
+
+
+/* mediaqueries  -- I know that this should always be mobile first approach 
+but I'm doing the opposite for this project since there aren't that many styles*/
+
+@media screen and (max-width: 500px) {
+    canvas {
+        margin: -5em 0 -5em 0;
+    }
+
+    .searchIcon {
+        width: 4%;
+    }
+
+    .customizeContainer {
+        top: 94%;
+        left: 75%;
+    }
+}
+
+@media screen and (min-width: 501px) {
+    .customizeContainer {
+        top: 94%;
+        left: 80%;
+    }
+}
+
+@media screen and (min-width: 775px) {
+    .customizeContainer {
+        top: 94%;
+        left: 85%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .customizeContainer {
+        top: 94%;
+        left: 88%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .customizeContainer {
+        top: 94%;
+        left: 90%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .customizeContainer {
+        top: 94%;
+        left: 92%;
+    }
 }
